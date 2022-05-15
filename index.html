@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +8,11 @@
     <title>Momentum</title>
 </head>
 <body>
-    <div class="hello">
-        <h1>Grab me!</h1>
-    </div>
-    <div class="hello">
-        <h1>Grab me!</h1>
-    </div>
-    <div class="hello">
-        <h1>Grab me!</h1>
-    </div>
-
+    <form id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?" />
+        <input type="submit" value="Log In" />
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
     <script src="app.js"></script>
 </body>
 </html>
