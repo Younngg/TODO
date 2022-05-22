@@ -45,6 +45,7 @@ function paintGreetings(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME);
     todoForm.classList.remove(HIDDEN_CLASSNAME);
     logoutBtn.classList.remove(HIDDEN_CLASSNAME);
+    logoutBtn.classList.add("logoutBtn");
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
