@@ -3,6 +3,7 @@ const loginInput = document.querySelector("#login-form input");
 const loginText = document.querySelector("#login-form .login-text");
 const greeting = document.querySelector("#greeting");
 const todoForm = document.querySelector("#todo-form");
+const todoFormInput = document.querySelector("#todo-form input");
 const todotodo = document.querySelector("#todo-list")
 const todoLi = document.querySelector("#todo-list li")
 
@@ -46,6 +47,7 @@ function paintGreetings(username) {
     todoForm.classList.remove(HIDDEN_CLASSNAME);
     logoutBtn.classList.remove(HIDDEN_CLASSNAME);
     logoutBtn.classList.add("logoutBtn");
+    todoFormInput.value = null;
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
