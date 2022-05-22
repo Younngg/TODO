@@ -194,11 +194,16 @@ main .inner .main-container {
         padding: 20px;
     }
 }
+@media screen and (max-width: 600px) {
+    #quote {
+        width: 250px;
+    }
+}
 
 .logoutBtn {
     display: block;
     font-size: 15px;
-    margin: auto;
+    margin: 100px auto 0;
     border: none;
     padding: 20px;
     border-radius: 10px;
