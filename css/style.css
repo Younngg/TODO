@@ -196,7 +196,7 @@ main .inner .main-container {
 }
 @media screen and (max-width: 600px) {
     #quote {
-        width: 250px;
+        width: 50vw;
     }
 }
 
