@@ -85,7 +85,7 @@ main .inner .main-container {
 }
 .main-container .todo #greeting {
     position: absolute;
-    top: -10%;
+    top: -10px;
     left: 3%;
     padding: 5px 10px 7px;
     background-color: #DF852E;
