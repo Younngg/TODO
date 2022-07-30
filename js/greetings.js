@@ -14,15 +14,13 @@ const USERNAME_KEY = 'username';
 
 function onLogoutSubmit(event) {
   event.preventDefault();
-  localStorage.removeItem('todos');
-  localStorage.removeItem('username');
+  localStorage.clear();
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   logoutBtn.classList.add(HIDDEN_CLASSNAME);
   logoutBtn.classList.remove('logoutBtn');
   greeting.classList.add(HIDDEN_CLASSNAME);
   todoForm.classList.add(HIDDEN_CLASSNAME);
   loginText.value = null;
-
   while (todotodo.hasChildNodes()) {
     todotodo.removeChild(todotodo.firstChild);
   }
@@ -41,7 +39,7 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `${username}`;
+  greeting.innerText = `Hi ${username}, What you need to do is...`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
   todoForm.classList.remove(HIDDEN_CLASSNAME);
   todoFormInput.value = null;
@@ -51,7 +49,10 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if (savedUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
+  logoutBtn.classList.add(HIDDEN_CLASSNAME);
   loginForm.addEventListener('submit', onLoginSubmit);
 } else {
   paintGreetings(savedUsername);
+  logoutBtn.classList.remove(HIDDEN_CLASSNAME);
+  logoutBtn.classList.add('logoutBtn');
 }

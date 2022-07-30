@@ -11,9 +11,7 @@
   <body>
     <header>
       <div class="inner">
-        <div class="header-logo">
-          <h1><i class="fa-solid fa-leaf"></i></h1>
-        </div>
+        <h1 class="header-logo">TO DO LIST</h1>
       </div>
     </header>
     <main>
@@ -27,7 +25,7 @@
               type="text"
               placeholder="What is your name?"
             />
-            <input type="submit" value="Log In" />
+            <input type="submit" value="Log In" class="submit-btn" />
           </form>
           <div class="todo">
             <form id="todo-form" class="hidden">
@@ -37,24 +35,23 @@
                 required
               />
             </form>
-            <ul id="todo-list">
+            <div class="todo-list-box">
               <h1 id="greeting" class="hidden"></h1>
-              <i class="fa-solid fa-caret-down"></i>
-            </ul>
+              <ul id="todo-list"></ul>
+            </div>
           </div>
           <!-- //todo -->
         </div>
         <!-- //main-container -->
-        <div class="bottom-content">
-          <div class="bottom-left">
+        <div class="right-content">
+          <div class="right-top">
             <h2 id="clock">00:00:00</h2>
-            <div id="weather">
-              <span></span>
-              <span></span>
-            </div>
           </div>
-          <button id="quote-btn"><i class="fa-solid fa-envelope"></i></button>
-          <div id="quote" class="hidden">
+          <div id="weather">
+            <span></span>
+            <span></span>
+          </div>
+          <div id="quote">
             <span></span>
             <span></span>
           </div>
@@ -62,13 +59,12 @@
         <!-- //bottom-content -->
       </div>
       <!-- //inner -->
-      <button class="hidden" id="logout">Log out</button>
     </main>
-
+    <button class="hidden" id="logout">Log out</button>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
+    <!--     <script src="js/background.js"></script> -->
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script
